@@ -72,10 +72,16 @@ OFFLINE_TOKENIZERS = {
     "Gemma 3": (lambda: _hf("unsloth/gemma-3-27b-it"), "unsloth/gemma-3-27b-it (зеркало)", "fresh"),
     "Mistral Small 3.1": (lambda: _hf("mistralai/Mistral-Small-3.1-24B-Instruct-2503"), "mistralai/Mistral-Small-3.1-24B-Instruct-2503", "fresh"),
     "GLM-4.5": (lambda: _hf("zai-org/GLM-4.5"), "zai-org/GLM-4.5", "fresh"),
+    # Новейшие версии линеек на ноябрь 2026 года.
+    "Qwen3.8": (lambda: _hf("Qwen/Qwen3.8-27B"), "Qwen/Qwen3.8-27B", "newest"),
+    "DeepSeek-V4.1": (lambda: _hf("deepseek-ai/DeepSeek-V4.1-Flash"), "deepseek-ai/DeepSeek-V4.1-Flash", "newest"),
+    "GLM-5.3": (lambda: _hf("zai-org/GLM-5.3"), "zai-org/GLM-5.3", "newest"),
+    "Mistral Large 4": (lambda: _hf("mistralai/Mistral-Large-4-1T-A52B"), "mistralai/Mistral-Large-4-1T-A52B", "newest"),
+    "Gemma 4": (lambda: _hf("google/gemma-4-31B-it"), "google/gemma-4-31B-it", "newest"),
 }
 
 # Токенайзеры актуальных моделей Claude не опубликованы: считаем через API count_tokens.
-CLAUDE_MODELS = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"]
+CLAUDE_MODELS = ["claude-fable-5-2", "claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"]
 
 
 def anthropic_client():
